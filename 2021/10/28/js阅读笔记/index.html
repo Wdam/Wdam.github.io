@@ -1,0 +1,380 @@
+<!DOCTYPE html><html lang="zh"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="format-detection" content="telephone=no"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black"><link rel="icon" href="/images/icons/favicon-16x16.png?v=2.6.2" type="image/png" sizes="16x16"><link rel="icon" href="/images/icons/favicon-32x32.png?v=2.6.2" type="image/png" sizes="32x32"><meta name="description" content="js阅读笔记，能看多少是多少">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Wdam">
+<meta property="og:url" content="http://example.com/2021/10/28/js%E9%98%85%E8%AF%BB%E7%AC%94%E8%AE%B0/index.html">
+<meta property="og:site_name" content="Wdam">
+<meta property="og:description" content="js阅读笔记，能看多少是多少">
+<meta property="og:locale">
+<meta property="og:image" content="https://i.loli.net/2021/07/16/j4C5s9bYnd7GgQN.png">
+<meta property="og:image" content="https://i.loli.net/2021/07/19/u6IR5mKG1yekjL2.png">
+<meta property="og:image" content="https://i.loli.net/2021/07/19/LGZSXMRlmB2xcoh.png">
+<meta property="og:image" content="https://i.loli.net/2021/07/19/baZkBNTFewqI74W.png">
+<meta property="og:image" content="https://i.loli.net/2021/07/19/vCKJjB9xnFa3Utd.png">
+<meta property="og:image" content="https://i.loli.net/2021/07/20/XFtBOJuweziK4qg.png">
+<meta property="article:published_time" content="2021-10-28T08:43:39.820Z">
+<meta property="article:modified_time" content="2021-08-18T14:27:02.510Z">
+<meta property="article:author" content="Wdam">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://i.loli.net/2021/07/16/j4C5s9bYnd7GgQN.png"><title>[ Untitled ] | Wdam</title><link ref="canonical" href="http://example.com/2021/10/28/js%E9%98%85%E8%AF%BB%E7%AC%94%E8%AE%B0/"><link rel="dns-prefetch" href="https://cdn.jsdelivr.net"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.12.1/css/all.min.css" type="text/css"><link rel="stylesheet" href="/css/index.css?v=2.6.2"><script>var Stun = window.Stun || {};
+var CONFIG = {
+  root: '/',
+  algolia: undefined,
+  assistSearch: undefined,
+  fontIcon: {"prompt":{"success":"fas fa-check-circle","info":"fas fa-arrow-circle-right","warning":"fas fa-exclamation-circle","error":"fas fa-times-circle"},"copyBtn":"fas fa-copy"},
+  sidebar: {"offsetTop":"20px","tocMaxDepth":6},
+  header: {"enable":true,"showOnPost":true,"scrollDownIcon":false},
+  postWidget: {"endText":true},
+  nightMode: {"enable":true},
+  back2top: {"enable":true},
+  codeblock: {"style":"default","highlight":"light","wordWrap":false},
+  reward: false,
+  fancybox: false,
+  zoomImage: {"gapAside":"20px"},
+  galleryWaterfall: undefined,
+  lazyload: false,
+  pjax: undefined,
+  externalLink: {"icon":{"enable":true,"name":"fas fa-external-link-alt"}},
+  shortcuts: undefined,
+  prompt: {"copyButton":"Copy","copySuccess":"Copy Success","copyError":"Copy Error"},
+  sourcePath: {"js":"js","css":"css","images":"images"},
+};
+
+window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/atom.xml" title="Wdam" type="application/atom+xml">
+</head><body><div class="container" id="container"><header class="header" id="header"><div class="header-inner"><nav class="header-nav header-nav--fixed"><div class="header-nav-inner"><div class="header-nav-menubtn"><i class="fas fa-bars"></i></div><div class="header-nav-menu"><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/"><span class="header-nav-menu-item__icon"><i class="fas fa-home"></i></span><span class="header-nav-menu-item__text">Home</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/archives/"><span class="header-nav-menu-item__icon"><i class="fas fa-folder-open"></i></span><span class="header-nav-menu-item__text">Archives</span></a></div></div><div class="header-nav-mode"><div class="mode"><div class="mode-track"><span class="mode-track-moon"></span><span class="mode-track-sun"></span></div><div class="mode-thumb"></div></div></div></div></nav><div class="header-banner"><div class="header-banner-info"><div class="header-banner-info__title">Wdam</div><div class="header-banner-info__subtitle"></div></div></div></div></header><main class="main" id="main"><div class="main-inner"><div class="content-wrap" id="content-wrap"><div class="content" id="content"><!-- Just used to judge whether it is an article page--><div id="is-post"></div><div class="post"><header class="post-header"><h1 class="post-title">[ Untitled ]</h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__info">Created</span><span class="post-meta-item__value">2021-10-28</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__info">Updated</span><span class="post-meta-item__value">2021-08-18</span></span></div></header><div class="post-body"><p>js阅读笔记，能看多少是多少</p>
+<span id="more"></span>
+
+<h1 id="第二章-HTML中的JavaScript"><a href="#第二章-HTML中的JavaScript" class="headerlink" title="第二章 HTML中的JavaScript"></a>第二章 HTML中的JavaScript</h1><h2 id="标签位置："><a href="#标签位置：" class="headerlink" title="标签位置："></a>标签位置：</h2><p>在<code>&lt;head&gt;</code>标签内，优点：把引入的文件都集中在一起。弊端：在加载慢时网页空白，导致观感差。改进：放在页面元素后边</p>
+<h2 id="延迟执行脚本："><a href="#延迟执行脚本：" class="headerlink" title="延迟执行脚本："></a>延迟执行脚本：</h2><p><code>defer</code> 属性，优点：在页面解析后才运行脚本，避免空白。缺点：在实际中延迟脚本未必按照顺序执行，也未必在<code>DOMContentLoaded</code> 事件之前执行，最好只包含一个这样的脚本。</p>
+<h2 id="异步执行脚本："><a href="#异步执行脚本：" class="headerlink" title="异步执行脚本："></a>异步执行脚本：</h2><p><code>async</code> 属性与<code>defer</code> 类似，不同的是<code>async</code>脚本并不能保证执行难顺序，因此几个脚本之间最好不要有依赖关系，在加载期间也不要操作DOM，</p>
+<h2 id="动态加载脚本："><a href="#动态加载脚本：" class="headerlink" title="动态加载脚本："></a>动态加载脚本：</h2><p>向<code>dom</code>中动态添加<code>script</code> 元素</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> script = <span class="built_in">document</span>.createElement(<span class="string">&#x27;script&#x27;</span>);</span><br><span class="line">script.src = <span class="string">&#x27;xxxx.js&#x27;</span>;</span><br><span class="line"><span class="built_in">document</span>.head.appendChild(script);</span><br></pre></td></tr></table></figure>
+
+<p>默认情况下这种方式创建的是异步方式加载的，弊端：不是所有浏览器都支持<code>async</code>属性，如果要统一加载行为，可以明确设置为同步加载</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> script = <span class="built_in">document</span>.createElement(<span class="string">&#x27;script&#x27;</span>);</span><br><span class="line">script.src = <span class="string">&#x27;xxxx.js&#x27;</span>;</span><br><span class="line">script.async = <span class="literal">false</span>;</span><br><span class="line">docunment.head.appendChild(<span class="string">&#x27;script&#x27;</span>);</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>弊端:这种方式获取的资源对浏览器预加载器来说完全不可见，严重影响性能。要想让预加载器知道动态文件的存在，可以在文档头部显式的声明</p>
+<p><code> &lt;link rel = &quot;preload&quot; href=&quot;xxxx.js&quot;&gt;</code></p>
+<h2 id="行内代码与外部文件"><a href="#行内代码与外部文件" class="headerlink" title="行内代码与外部文件"></a>行内代码与外部文件</h2><p>使用外部文件的优点：可维护性高，提高加载速度，适应未来。</p>
+<h2 id="lt-noscript-gt-标签"><a href="#lt-noscript-gt-标签" class="headerlink" title="&lt;noscript&gt;标签"></a><code>&lt;noscript&gt;</code>标签</h2><p><code>&lt;noscript&gt;</code>元素可以出现在任何<code>body</code> 元素中，当浏览器不支持脚本或者浏览器对脚本的支持被关闭时<code>noscript</code>中的元素就会被渲染。否则不会渲染。</p>
+<h1 id="第三章语言基础"><a href="#第三章语言基础" class="headerlink" title="第三章语言基础"></a>第三章语言基础</h1><h2 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h2><p>区分大小写，标识符支持数字、字母、下划线、美元符号，按照惯例，标识符应使用驼峰命名法。推荐加上分号，但不是必须的。</p>
+<h3 id="变量"><a href="#变量" class="headerlink" title="变量"></a>变量</h3><h3 id="var-关键字"><a href="#var-关键字" class="headerlink" title="var 关键字"></a><code>var</code> 关键字</h3><p>可以保存任何类型的值，在未初始化的时候保存<code>undefined</code> </p>
+<p>var 声明作用域，用var声明的变量会成为函数内部的局部变量</p>
+<p><code>let</code>关键字：let关键字声明的范围是块级作用域，var声明的是函数作用域，let声明的变量不能在块外被引用</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span>(ture) &#123;</span><br><span class="line">   	<span class="keyword">let</span> age = <span class="number">26</span>;</span><br><span class="line">    <span class="built_in">console</span>.log(age); <span class="comment">//26</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">console</span>.log(<span class="number">26</span>); <span class="comment">//未定义</span></span><br></pre></td></tr></table></figure>
+
+<p>let也不允许冗余声明</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> name;</span><br><span class="line"><span class="keyword">var</span> name;</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> age;</span><br><span class="line"><span class="keyword">let</span> age; <span class="comment">//syntax error 重复定义</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>暂时性死区：在let声明前执行的瞬间</p>
+<p>var和let定义变量的区别就是let声明的变量不会被提升</p>
+<p>let声明的全局变量不会变成window对象属性</p>
+<p>在for循环中使用let声明变量：推荐</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span>(<span class="keyword">var</span> i = <span class="number">0</span>;i&lt;<span class="number">5</span>;i++)&#123;</span><br><span class="line">    <span class="comment">//TODO</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">console</span>.log(i) <span class="comment">//5</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">let</span> i = <span class="number">0</span>;i&lt;<span class="number">5</span>;i++)&#123;</span><br><span class="line">    <span class="comment">//TODO</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">console</span>.log(i) <span class="comment">//未定义</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">var</span> i = <span class="number">0</span>;i&lt;<span class="number">5</span>;i++)&#123;</span><br><span class="line">   <span class="built_in">console</span>.log(i)  <span class="comment">//5，5，5，5，5</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">let</span> i = <span class="number">0</span>;i&lt;<span class="number">5</span>;i++)&#123;</span><br><span class="line">   <span class="built_in">console</span>.log(i)  <span class="comment">//1,2,3,4,5</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="const关键字"><a href="#const关键字" class="headerlink" title="const关键字"></a><code>const</code>关键字</h3><p>const的行为与let基本一致，唯一一个重要的区别是用它声明变量必须初始化变量，尝试修改内容时也会报错，const声明的限制只适用于对它指向的变量的引用，如果const声明了一个对象，修改对象内部的值并不会报错，由于var怪异的行为导致各种问题，所以优先推荐使用const，其次是let</p>
+<h2 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h2><p>6种简单数据类型：undefined null boolean number string symbol 复杂数据类型：object</p>
+<p><code>typeof</code>在检测声明未定义的变量或者未声明的变量时都是undefined</p>
+<p>数值转换：<code>Number(),parseInt(),parseFloat()</code></p>
+<p>number函数基于如下规则执行转换：</p>
+<ul>
+<li>布尔值，true转换为1，false转换为0；</li>
+<li>数值，直接返回；</li>
+<li>null，返回0；</li>
+<li>undefined，返回NAN；</li>
+<li>字符串，应用以下规则：<ul>
+<li>如果字符串包含数值字符，包括数值字符前的加减号，转换为一个十进制的数值</li>
+<li>如果字符串包含有效的浮点值格式则转化为浮点值</li>
+<li>如果字符串包含有效的十六进制，则转换为对应的十进制值</li>
+<li>如果是空则返回0</li>
+<li>如果含有其他字符则返回0</li>
+</ul>
+</li>
+<li>对象，调用valueOf()方法，并按照上述规则转换返回的值，如果结果是NaN，则调用toString()方法，再按照转换字符串的方法</li>
+</ul>
+<p>toString()函数遵循以下规则</p>
+<ul>
+<li>如果值有toString方法，则调用该方法并返回结果；</li>
+<li>如果值是null则返回”null”</li>
+<li>如果值是undefined则返回”undefined”</li>
+</ul>
+<p>模板字符串</p>
+<h2 id="symbol类型"><a href="#symbol类型" class="headerlink" title="symbol类型"></a>symbol类型</h2><p>用途是确保对象属性使用唯一标识符，不会发生属性冲突的危险</p>
+<p>使用：符号需要用Symbol函数初始化，调用symbol函数时也可以传入一个字符串参数作为对符号的描述</p>
+<p>使用符号作为属性：</p>
+<p>凡是可以使用字符串或数值作为属性的地方，都可以使用符号。包括了对象字面量属性和object.defineproperty()定义的属性。对象字面量只能在计算属性语法中使用符号作为属性</p>
+<h2 id="操作符"><a href="#操作符" class="headerlink" title="操作符"></a>操作符</h2><p>一元操作符</p>
+<p>位操作符</p>
+<p>布尔操作符</p>
+<p>乘性操作符</p>
+<p>除法操作符</p>
+<p>取模操作符</p>
+<p>指数操作符：math.pow()</p>
+<p>加性操作符</p>
+<p>减法操作符</p>
+<p>关系操作符</p>
+<p>相等操作符</p>
+<p>条件操作符</p>
+<p>赋值操作符</p>
+<p>逗号操作符</p>
+<h2 id="语句"><a href="#语句" class="headerlink" title="语句"></a>语句</h2><p>if语句</p>
+<p>do….while语句</p>
+<p>while语句</p>
+<p>for语句</p>
+<p>for   in   语句,是一种严格的迭代语句，用于枚举对象中的非符号属性</p>
+<p>for    of语句，是一种严格的迭代对象，用于遍历可迭代对象元素</p>
+<p>break和continue语句</p>
+<p>with语句：将代码作用域设置为特定的对象</p>
+<p>Switch语句</p>
+<p>函数</p>
+<h1 id="第四章变量作用域与内存"><a href="#第四章变量作用域与内存" class="headerlink" title="第四章变量作用域与内存"></a>第四章变量作用域与内存</h1><h3 id="原始值与引用值"><a href="#原始值与引用值" class="headerlink" title="原始值与引用值"></a>原始值与引用值</h3><p>javascript不允许直接访问内存位置，实际上操作的是对对象的引用，保存引用值的变量就是按引用访问的</p>
+<h3 id="动态属性"><a href="#动态属性" class="headerlink" title="动态属性"></a>动态属性</h3><p>引用值可以随时添加、修改、和删除其属性和方法，只有引用值可以动态添加后面可以使用的属性</p>
+<h3 id="复制值"><a href="#复制值" class="headerlink" title="复制值"></a>复制值</h3><p>引用值和原始值在通过变量复制时也有所不同。在通过变量把一个原始值赋值到另一个变量时，原始值会被复制到新变量的位置。在把引用值从一个变量赋值给另一个变量时，储存在变量中的值也会被复制到新变量所在的位置。区别在于，这里复制的值实际上是一个指针，他指向储存在堆内存中的对象。操作完成后，两个变量实际上指的是同一个对象</p>
+<h3 id="typeof"><a href="#typeof" class="headerlink" title="typeof"></a>typeof</h3><p>typeof虽然对原始值很有用，但对引用值作用不大，因此提出了<code>instanceof</code>操作符语法如下<code>result = variable instanceof constructor  </code></p>
+<h3 id="执行上下文和作用域"><a href="#执行上下文和作用域" class="headerlink" title="执行上下文和作用域"></a>执行上下文和作用域</h3><p>变量函数的上下文决定了他们可以访问哪些数据，以及他们的行为每个上下文都有一个关联的变量对象。全局上下文是最外层的上下文。在浏览器中全局上下文是window对象，通过var定义的全局变量和函数都会成为window对象的属性和方法。使用let和const的顶级声明不会定义在全局上下文中。</p>
+<p>上下文中的代码在执行的时候会创建变量对象的一个作用链</p>
+ <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> color = <span class="string">&quot;blue&quot;</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">changeColor</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="keyword">let</span> anotherColor = <span class="string">&#x27;red&#x27;</span>;</span><br><span class="line">   </span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">swapColor</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        <span class="keyword">let</span> tempColor = anotherColor;</span><br><span class="line">        anotherColor = color;</span><br><span class="line">        color = tempColor;</span><br><span class="line">    &#125;</span><br><span class="line">    swapColor();</span><br><span class="line">    <span class="built_in">console</span>.log(color);</span><br><span class="line">    <span class="built_in">console</span>.log(anotherColor);</span><br><span class="line">    <span class="comment">//console.log(tempColor); //undefined</span></span><br><span class="line">&#125;</span><br><span class="line">changeColor()</span><br></pre></td></tr></table></figure>
+
+<img src="https://i.loli.net/2021/07/16/j4C5s9bYnd7GgQN.png" alt="image-20210716171056253" style="zoom: 33%;" />
+
+<p>内部上下文可以通过作用域链访问外部上下文中的一切，但外部上下文无法访问内部上下文中的任何东西。上下文之间是线性的有序的，任何上下文都不能到下一级上下文中去搜索</p>
+<h3 id="作用域增强"><a href="#作用域增强" class="headerlink" title="作用域增强"></a>作用域增强</h3><p>某些语句会导致在作用域链前段临时添加上下文，这个上下文在代码执行后会被删除。通常在两种情况下会出现这种情况：</p>
+<p>try/catch语句的catch块：创建一个新的变量，这个变量会包含要抛出的错误对象声明</p>
+<p>with语句：像作用域链前端添加指定声明对象</p>
+<blockquote>
+<p>不建议使用with，因为他可能是混淆错误和兼容性的根源。</p>
+</blockquote>
+<h3 id="变量声明"><a href="#变量声明" class="headerlink" title="变量声明"></a>变量声明</h3><p>let的作用域是块级的，块级作用域是由最近的一对花括号界定的。也就是，if/while/function甚至是单独的let，重复的let声明同样会报错。</p>
+<p>const变量一经声明就无法在改变。</p>
+<h3 id="垃圾回收"><a href="#垃圾回收" class="headerlink" title="垃圾回收"></a>垃圾回收</h3><p>JavaScript是使用垃圾回收的语言，也就是说执行环境负责在代码执行时管理内存。</p>
+<p>垃圾回收两种策略：</p>
+<ul>
+<li>标记清理：把“对象是否不再被需要”简化为“对象是否可以获得”。这个算法假定设置一个叫做根（root）的对象（在Javascript里，根是全局对象）。垃圾回收器将定期从根开始，找所有从根开始引用的对象，然后找这些对象引用的对象……从根开始，垃圾回收器将找到所有可以获得的对象和收集所有不能获得的对象。</li>
+<li>不常用的回收机制：引用计数，这是最初级的垃圾收集算法。此算法把“对象是否不再需要”简化定义为“对象有没有其他对象引用到它”。如果没有引用指向该对象（零引用），对象将被垃圾回收机制回收。</li>
+</ul>
+<h1 id="第五章基本引用类型"><a href="#第五章基本引用类型" class="headerlink" title="第五章基本引用类型"></a>第五章基本引用类型</h1><h2 id="date"><a href="#date" class="headerlink" title="date"></a>date</h2><p>date类型将日期保存为自协调世界时，从1970年1月1日0时至今所经过的毫秒数，使用这种储存格式，date类型可以精确表示1970/1/1之前及以后2856160年的日期。</p>
+<p>​    创建日期对象    <code>let now = new Date()</code> </p>
+<p><img src="https://i.loli.net/2021/07/19/u6IR5mKG1yekjL2.png" alt="image-20210719141519023"></p>
+<p><code>Date.parse()</code>将标准日期转化为毫秒数</p>
+<p><img src="https://i.loli.net/2021/07/19/LGZSXMRlmB2xcoh.png" alt="image-20210719143241400"></p>
+<h2 id="继承的方法"><a href="#继承的方法" class="headerlink" title="继承的方法"></a>继承的方法</h2><p>Date类型重写了<code>toLocaleString()</code> <code> toString()</code> <code> valueOf()</code>  ,toLocaleString()返回与浏览器运行的本地环境一致的时间与日期；toString()方法返回带时区信息的日期和时间；<code> valueOf()</code>返回日期的毫秒显示。</p>
+<p><img src="https://i.loli.net/2021/07/19/baZkBNTFewqI74W.png" alt="image-20210719143748579"></p>
+<h2 id="日期格式化的方法"><a href="#日期格式化的方法" class="headerlink" title="日期格式化的方法"></a>日期格式化的方法</h2><ul>
+<li>toDataString:显示日期中的周几、年月日</li>
+<li>toTimeSring：显示日期中的时分秒</li>
+<li>toLocaleDateString：显示年月日</li>
+<li>toLocaleTimeString：显示时分秒</li>
+<li>toUTCString：显示完整UTC时间</li>
+</ul>
+<h2 id="日期-时间组件方法"><a href="#日期-时间组件方法" class="headerlink" title="日期/时间组件方法"></a>日期/时间组件方法</h2><p><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Date">Date</a></p>
+<h2 id="RegExp"><a href="#RegExp" class="headerlink" title="RegExp"></a>RegExp</h2><p>通过regexp类型支持正则表达式，正则表达式使用类似Perl的语法创建：<code> let expression = /pattern/flags</code></p>
+<p>每个正则表达式可以携带多个或零个flags，用于控制正则表达式的行为。</p>
+<ul>
+<li>g：全局模式，表示查找字符串的全部内容，而不是找到第一个内容就结束。</li>
+<li>i：不区分大小写，表示在查找匹配时忽略大小写</li>
+<li>m：多行模式，表示查找到一行文本末尾时会继续查找</li>
+<li>y：粘附模式，表示只查找从lastIndex开始之后的字符串</li>
+<li>u：Unicode模式，启用Unicode匹配</li>
+<li>s：dotAll模式，表示元字符串，匹配任何字符</li>
+</ul>
+<p>使用不同的模式和标记可以创建出各种正则表达式</p>
+ <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//匹配字符串中的所有 at</span></span><br><span class="line"><span class="keyword">let</span> patern = <span class="regexp">/at/g</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">//匹配第一个bat或者cat</span></span><br><span class="line"><span class="keyword">let</span> pattern = <span class="regexp">/[bc]at/i</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">//匹配所有以at结尾的三字符组合，忽略大小写</span></span><br><span class="line"><span class="keyword">let</span> pattern = <span class="regexp">/.at/gi</span>;</span><br></pre></td></tr></table></figure>
+
+<p>元字符转义</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//匹配第一个bat或者cat</span></span><br><span class="line"><span class="keyword">let</span> pattern = <span class="regexp">/[bc]at/i</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">//匹配第一个[bc]at</span></span><br><span class="line"><span class="keyword">let</span> pattern = <span class="regexp">/\[bc\]at/i</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">//匹配所有以at结尾的三字符组合，忽略大小写</span></span><br><span class="line"><span class="keyword">let</span> pattern = <span class="regexp">/.at/gi</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">//匹配所有.at，忽略大小写</span></span><br><span class="line"><span class="keyword">let</span> parrent = <span class="regexp">/\.at/gi</span>;</span><br></pre></td></tr></table></figure>
+
+<h2 id="单例内置对象"><a href="#单例内置对象" class="headerlink" title="单例内置对象"></a>单例内置对象</h2><p>Global</p>
+<ol>
+<li>URL编码</li>
+<li>eval（）方法</li>
+<li>Global对象属性</li>
+<li>window对象</li>
+</ol>
+<p>Math</p>
+<ol>
+<li>Math对象属性</li>
+<li>min()和max()方法</li>
+<li>舍入方法</li>
+<li>random方法</li>
+<li>其他方法</li>
+</ol>
+<h1 id="第六章集合引用类型"><a href="#第六章集合引用类型" class="headerlink" title="第六章集合引用类型"></a>第六章集合引用类型</h1><h2 id="Object"><a href="#Object" class="headerlink" title="Object"></a>Object</h2><p>创建Object实例</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> person = <span class="keyword">new</span> <span class="built_in">Object</span>();</span><br><span class="line">person.name=<span class="string">&quot;吴亦凡&quot;</span>;</span><br><span class="line">person.aga = <span class="number">28</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> person=&#123;</span><br><span class="line">    <span class="attr">name</span>:<span class="string">&quot;吴亦凡&quot;</span>;</span><br><span class="line">    age:<span class="number">28</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="Array"><a href="#Array" class="headerlink" title="Array"></a>Array</h2><p>创建数组</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> list = <span class="keyword">new</span> <span class="built_in">Array</span>();</span><br><span class="line"><span class="keyword">let</span> list = [];</span><br></pre></td></tr></table></figure>
+
+<p>array构造函数还有两个es6新增的用于创建数组的静态方法：from(),of()。from用于将类数组结构转换为数组，of将一组参数转换为数组实例</p>
+<h3 id="迭代器方法"><a href="#迭代器方法" class="headerlink" title="迭代器方法"></a>迭代器方法</h3><p>在es6上，array原型暴露了3个用于检测数组内容的方法，key(),values(),entries()。key返回数组索引的迭代器，values返回数组元素迭代器，entries返回索引/值对的迭代器</p>
+<p><img src="https://i.loli.net/2021/07/19/vCKJjB9xnFa3Utd.png" alt="image-20210719174600191"></p>
+<h3 id="复制和填充方法"><a href="#复制和填充方法" class="headerlink" title="复制和填充方法"></a>复制和填充方法</h3><p>批量复制方法：fill，向一个已有数组中插入部分或全部值</p>
+<p>填充数组方法：copyWithin，按照范围浅复制数组中的部分内容，将他们插入到指定索引开始的位置。开始索引和结束索引则与fill使用方法相同</p>
+<h3 id="转换方法"><a href="#转换方法" class="headerlink" title="转换方法"></a>转换方法</h3><p>toString()返回由数组中每个值的等效字符串拼接而成的字符串</p>
+<p>valueOf()返回数组本身</p>
+<p><img src="https://i.loli.net/2021/07/20/XFtBOJuweziK4qg.png" alt="image-20210720144214530"></p>
+<h3 id="栈方法"><a href="#栈方法" class="headerlink" title="栈方法"></a>栈方法</h3><ul>
+<li>push()</li>
+<li>pop()</li>
+</ul>
+<h3 id="队列方法"><a href="#队列方法" class="headerlink" title="队列方法"></a>队列方法</h3><ul>
+<li>shift():删除数组的第一项并返回</li>
+<li>push():在末尾添加数据</li>
+</ul>
+<h3 id="排序方法"><a href="#排序方法" class="headerlink" title="排序方法"></a>排序方法</h3><ul>
+<li><p>reverse():将数组元素反向排序</p>
+</li>
+<li><p>sort()：按升序对数组排序</p>
+<p>sort方法可以接受一个比较函数</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">compare</span>(<span class="params">value1,value2</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(value1 &lt; value2)&#123;</span><br><span class="line">        <span class="keyword">return</span> -<span class="number">1</span>;</span><br><span class="line">    &#125; <span class="keyword">else</span> <span class="keyword">if</span>(value1 &gt; value2)&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">    &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> values= [<span class="number">0</span>,<span class="number">1</span>,<span class="number">5</span>,<span class="number">6</span>,<span class="number">9</span>,<span class="number">10</span>]</span><br><span class="line">values.sort(compare);</span><br><span class="line"><span class="built_in">console</span>.log(values); </span><br><span class="line"><span class="comment">//[ 0, 1, 5, 6, 9, 10 ]</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//简写为箭头函数</span></span><br><span class="line">values.sort(<span class="function">(<span class="params">a,b</span>) =&gt;</span>a&lt;b?<span class="number">1</span>:a&gt;b?-<span class="number">1</span>:<span class="number">0</span>)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="操作方法"><a href="#操作方法" class="headerlink" title="操作方法"></a>操作方法</h3><p>conat()：创建一个数组副本，把参数添加到副本末尾，最后返回一个新的数组</p>
+<p>slice()：接受一个或两个参数：返回元素开始索引和结束索引，如果只有一个参数则slice会返回索引到数组末尾的所有元素，如果有两个参数，则slice返回从开始索引到结束索引对应的所有元素，其中不包括结束索引对应的元素。</p>
+<p>有三种不同的方式使用这个方法</p>
+<ul>
+<li>删除：需要给splice传入两个参数：要删除的第一个元素的位置和要删除的元素数量</li>
+<li>插入：需要传入三个参数，开始位置，0，和要插入的元素</li>
+<li>替换：需要传入三个参数，开始位置，要删除元素的数量和要插入的任意多个元素</li>
+</ul>
+</li>
+</ul>
+<h3 id="搜索和位置方法"><a href="#搜索和位置方法" class="headerlink" title="搜索和位置方法"></a>搜索和位置方法</h3><p>ECMAScrip提供两种搜索数组的方法：按严格相等搜索，按断言搜索</p>
+<p>严格相等：</p>
+<ul>
+<li>indexOf()：从前往后搜索</li>
+<li>lastIndexOf():从后往前搜索</li>
+<li>includes()：从前往后搜索</li>
+</ul>
+<p>indexOf和lastIndexOf都要返回要查找的元素在数组中的位置，如果没找到则返回-1，includes返回布尔值</p>
+<p>断言函数：断言函数接收3个参数，元素，索引和数组本身。find()和findIndex()。find返回第一个匹配的元素，findeindex返回第一个匹配的索引</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> popole =[&#123;</span><br><span class="line">    <span class="attr">name</span>:<span class="string">&quot;s&quot;</span>,</span><br><span class="line">    <span class="attr">age</span>:<span class="number">18</span></span><br><span class="line">&#125;,</span><br><span class="line"> &#123;</span><br><span class="line">     <span class="attr">name</span>:<span class="string">&#x27;e&#x27;</span>,</span><br><span class="line">     <span class="attr">age</span>:<span class="number">56</span></span><br><span class="line"> &#125;];</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(people.find(element,index,array) =&gt; element.age&lt;<span class="number">28</span>);</span><br><span class="line"><span class="built_in">console</span>.log(people.findIndex(element,index,array)=&gt;element.age&lt;<span class="number">28</span>);</span><br></pre></td></tr></table></figure>
+
+<h3 id="迭代方法"><a href="#迭代方法" class="headerlink" title="迭代方法"></a>迭代方法</h3><ul>
+<li>every():对数组每一项都运行传入的函数，如果每一项都返回true则方法返回true</li>
+<li>filter()：对数组每一项都运行传入的函数，函数返回true的项目会形成数组返回</li>
+<li>forEach()：对数组每一项都运行传入的函数，没有返回值</li>
+<li>map()：对数组每一项都运行传入的函数，返回由每次函数调用返回的结果构成的数组</li>
+<li>some()：对数组每一项都运行传入的函数，如果有一项返回true则这个方法返回true</li>
+</ul>
+<h3 id="归并方法"><a href="#归并方法" class="headerlink" title="归并方法"></a>归并方法</h3><p>reduce()：从数组第一项遍历到最后一项</p>
+<p>reduceRight()：从最后一项遍历到第一项</p>
+<p>两个方法都接收4个参数：上一个归并值，当前项，当前项索引，数组本身。</p>
+<h3 id="定型数组"><a href="#定型数组" class="headerlink" title="定型数组"></a>定型数组</h3><h2 id="map"><a href="#map" class="headerlink" title="map"></a>map</h2><p>作为es6新特性map是一种新的集合类型，为这门语言带来了真正的键值储存机制</p>
+<h3 id="基本api"><a href="#基本api" class="headerlink" title="基本api"></a>基本api</h3><p>使用new关键字和map构造函数可以创建一个空映射</p>
+<p><code>const m = new Map();</code></p>
+<p>初始化后可以使用set方法再添加键值对，另外，可以使用get()和has()进行查询，可以通过size属性获取映射中的键值对数量，还可以使用delete和clear删除值。</p>
+<p>map可以使用任何javascript数据类型作为键</p>
+<h3 id="顺序与迭代"><a href="#顺序与迭代" class="headerlink" title="顺序与迭代"></a>顺序与迭代</h3><p>与object类型的一个主要差异是，map实例会维护键值对的插入顺序，因此可以根据插入顺序执行迭代操作。映射实例可以提供一个迭代器（iterator），能以插入顺序生成[key，value]形式的数组。可以通过entries方法取得这个迭代器。</p>
+<h3 id="选择Object还是Map"><a href="#选择Object还是Map" class="headerlink" title="选择Object还是Map"></a>选择Object还是Map</h3><ul>
+<li>内存占用，固定的内存大小，map比object多存50%的内容</li>
+<li>插入性能，插入速度并不会随着键值对数量而线性增加，如果涉及大量的插入操作，显然map性能更好。</li>
+<li>查找速度，差不多</li>
+<li>删除性能，如果涉及大量删除，选择map</li>
+</ul>
+<h2 id="weakmap"><a href="#weakmap" class="headerlink" title="weakmap"></a>weakmap</h2><h3 id="基本api-1"><a href="#基本api-1" class="headerlink" title="基本api"></a>基本api</h3><p>使用new关键字实例化一个空的weakmap</p>
+<p><code>const wm =new WeakMap()</code></p>
+<p><strong>弱映射中的键只能是Object或者继承自object的类型</strong></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span>   key1 = &#123;<span class="attr">id</span>:<span class="number">1</span>&#125;,</span><br><span class="line">        key2 = &#123;<span class="attr">id</span>:<span class="number">2</span>&#125;,</span><br><span class="line">        key3 = &#123;<span class="attr">id</span>:<span class="number">3</span>&#125;;</span><br><span class="line"><span class="keyword">const</span> wm1 = <span class="keyword">new</span> <span class="built_in">WeakMap</span>(</span><br><span class="line">    [</span><br><span class="line">        [key1,<span class="string">&quot;val1&quot;</span>],</span><br><span class="line">        [key2,<span class="string">&quot;val2&quot;</span>],</span><br><span class="line">        [key3,<span class="string">&quot;val3&quot;</span>]</span><br><span class="line">    ]</span><br><span class="line">)</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(wm1.get(key1));</span><br></pre></td></tr></table></figure>
+
+<h3 id="不可迭代键"><a href="#不可迭代键" class="headerlink" title="不可迭代键"></a>不可迭代键</h3><p>因为weakmap中键值对任何时候都有可能被销毁，所以没必要提供迭代键值对的能力，</p>
+<h2 id="Set"><a href="#Set" class="headerlink" title="Set"></a>Set</h2><p><code>const m =new Set() </code></p>
+<p>使用add增加值，使用has查询值，通过size获取元素数量，使用delete和clear删除元素，set中可以包含任何JavaScript数据类型作为值。</p>
+<h3 id="顺序与迭代-1"><a href="#顺序与迭代-1" class="headerlink" title="顺序与迭代"></a>顺序与迭代</h3><p>set会维护值插入时的顺序，因此支持按顺序迭代，</p>
+<p>集合实例可以提供一个迭代器，能以插入顺序生成集合内容。可以通过values方法及其别名方法keys取得这个迭代器。</p>
+<h2 id="WeakSet"><a href="#WeakSet" class="headerlink" title="WeakSet()"></a>WeakSet()</h2><h1 id="第七章迭代器与生成器"><a href="#第七章迭代器与生成器" class="headerlink" title="第七章迭代器与生成器"></a>第七章迭代器与生成器</h1><h2 id="理解迭代"><a href="#理解迭代" class="headerlink" title="理解迭代"></a>理解迭代</h2><p>在JavaScript中，计数循环就是一种最简单的循环，循环是迭代机制的基础，因为它可以指定迭代的次数。以及每次迭代要进行的操作。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> list = [<span class="string">&#x27;1&#x27;</span>,<span class="string">&#x27;2&#x27;</span>,<span class="string">&#x27;4&#x27;</span>,<span class="string">&#x27;5&#x27;</span>];</span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">let</span> index = <span class="number">0</span>;index&lt;list.length;++index)&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(list[index])</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>因为数组有已知长度，且数组每一项都可以通过索引获取，所以整个数组可以通过递增索引来遍历，由于以下原因通过这种循环来执行例程并不理想：</p>
+<ul>
+<li>迭代前需要事先知道如何使用数据结构，数组中的每一项都只能先通过引用取得数组对象，然后再通过<code>[]</code>操作符取得特定索引位置上的项。这种情况并不适用于所有数据结构</li>
+<li>遍历顺序并不是数据结构固有的。通过递增索引来访问数据是特定与数组类型的方式，并不适用于其他具有隐式顺序的数据结构</li>
+</ul>
+<p>es5新增了forEach方法。向通用迭代需求迈进了一步。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> list = [<span class="string">&#x27;1&#x27;</span>,<span class="string">&#x27;2&#x27;</span>,<span class="string">&#x27;4&#x27;</span>,<span class="string">&#x27;5&#x27;</span>];</span><br><span class="line">list.forEach(<span class="function">(<span class="params">item</span>) =&gt;</span><span class="built_in">console</span>.log(item));</span><br></pre></td></tr></table></figure>
+
+<p>缺点：没有办法标识迭代何时终止，因此这个方法只适用于数组，而且回调结构也比较笨拙。</p>
+<h2 id="迭代器模式"><a href="#迭代器模式" class="headerlink" title="迭代器模式"></a>迭代器模式</h2><p><strong>迭代器模式</strong>描述了一个方案，把有些结构称为可迭代对象，因为他们实现了正式的Iterable接口，而且可以通过迭代器Iterator消费。可迭代对象是是一种抽象的说法，基本上，可以把迭代对象理解为数组或集合这样的集合类型的对象。他们包含的元素是有限的，而且都具有无歧义的遍历顺序。任何实现Iterable接口的数据结构都可以被实现Iterator接口的结构消费。迭代器是按需创建的一次性对象，每个迭代器都会关联一个可迭代对象，迭代器会暴露迭代其关联可迭代对象的api。</p>
+<p><strong>迭代器</strong>：就是一个拥有next()方法的特殊对象，每次调用next()都返回一个结果对象。</p>
+<h3 id="可迭代协议"><a href="#可迭代协议" class="headerlink" title="可迭代协议"></a>可迭代协议</h3><p>实现Iterable接口要求同时具备两种能力，支持迭代的自我识别能力和创建实现Iterator接口的对象能力。在ecmascri中这意味着必须暴露一个属性作为默认迭代器，而这个属性必须使用特殊的Symbol.iterator作为键。</p>
+<p>很多类型都实现了Iterator接口</p>
+<ul>
+<li>字符串</li>
+<li>数组</li>
+<li>映射</li>
+<li>集合</li>
+<li>arguments对象</li>
+<li>NodeList等Dom集合类型</li>
+</ul>
+<p>检查是否存在默认迭代器属性可以暴露这个工厂函数</p>
+<p><code>console.log(num[Symbol.iteror])    //undefined</code></p>
+<p>实际写代码过程中，不需要显示调用这个工厂函数来生成迭代器，实现可迭代协议的所有类型都会自动兼容接收可迭代对象的任何语言特性，接收可迭代对象的原生语言特性包括：</p>
+<ul>
+<li><p>for-of循环</p>
+</li>
+<li><p>数组解构</p>
+</li>
+<li><p>扩展操作符</p>
+</li>
+<li><p>Array.from()</p>
+</li>
+<li><p>创建集合</p>
+</li>
+<li><p>创建映射</p>
+</li>
+<li><p>Promise.all()接收由期约组成的可迭代对象</p>
+</li>
+<li><p>Promise.race()接收由期约组成的可迭代对象</p>
+</li>
+<li><p>yield*操作符，在生成器中使用</p>
+<p>这些原生的语言结构会在后台调用提供可迭代对象这个工厂函数，从而创建迭代器：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> arr [<span class="string">&#x27;foo&#x27;</span>,<span class="string">&#x27;bar&#x27;</span>,<span class="string">&#x27;baz&#x27;</span>];</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">let</span> el <span class="keyword">of</span> arr)&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(el);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h3 id="迭代器协议"><a href="#迭代器协议" class="headerlink" title="迭代器协议"></a>迭代器协议</h3><p>  迭代器是一种一次性使用的对象，用于迭代与其关联的可迭代对象。迭代器api使用next()方法在可迭代对象中遍历数据。每次成功调用next()都会返回一个IteratorResult对象，其中包含迭代器返回下一个值，若不调用next()则无法知道迭代器当前的位置。next()方法放回的迭代器对象IteratorReasolt包含两个属性：done和value。done是一个布尔值，表示是否还可以再次调用next()取得下一个值。value包含可迭代对象的下一个值，或者undefined；done为true状态为耗尽</p>
+<h2 id="生成器"><a href="#生成器" class="headerlink" title="生成器"></a>生成器</h2><p>生成器是一种返回迭代器的函数，通过function关键字后的星号表示，函数中会用到新的关键字yield</p>
+<h3 id="生成器基础"><a href="#生成器基础" class="headerlink" title="生成器基础"></a>生成器基础</h3><p>生成器的形式是一个函数，函数名称前边加一个*，表示他是一个生成器。只要是可以定义函数的地方，就可以定义生成器。</p>
+<p><code>function *generatorFn()&#123;&#125;</code></p>
+<p>生成器函数表达式</p>
+<p><code>let generatorFn = function *()&#123;&#125;</code></p>
+<p>作为对象字面量方法的生成器函数</p>
+<p><code>let foo =&#123;</code></p>
+<p><code>* genertorFn()&#123;&#125;</code></p>
+<p><code>&#125;</code></p>
+<p>……..</p>
+<p>调用生成器函数会产生一个生成器对象，生成器对象一开始处于暂停执行状态。与迭代器相似，生成器对象也实现了Itreator接口，因此具有next方法。调用这个方法会让生成器开始或恢复执行</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> *<span class="title">generatorFn</span>(<span class="params"></span>)</span>&#123;&#125;</span><br><span class="line"><span class="keyword">const</span> g = generatorFn();</span><br><span class="line"><span class="built_in">console</span>.log(g);</span><br><span class="line"><span class="built_in">console</span>.log(g.next);</span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment"> Object [Generator] &#123;&#125;</span></span><br><span class="line"><span class="comment">[Function: next]</span></span><br><span class="line"><span class="comment">*/</span></span><br></pre></td></tr></table></figure>
+
+<p>next方法的返回值类似于迭代器，有一个done属性和一个value属性。函数体为空的生成器函数中间不会停留，调用一次next就会让生成器达到done：true的状态</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> *<span class="title">createIterator</span>(<span class="params">items</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">let</span> i=<span class="number">0</span>; i&lt;items.length; i++) &#123;</span><br><span class="line">        <span class="keyword">yield</span> items[i];</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> iterator = createIterator([<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>]);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 既然生成器返回的是迭代器，自然就可以调用迭代器的next()方法</span></span><br><span class="line"><span class="built_in">console</span>.log(iterator.next());  <span class="comment">// &quot;&#123; value: 1, done: false&#125;&quot;</span></span><br><span class="line"><span class="built_in">console</span>.log(iterator.next());  <span class="comment">// &quot;&#123; value: 2, done: false&#125;&quot;</span></span><br><span class="line"><span class="built_in">console</span>.log(iterator.next());  <span class="comment">// &quot;&#123; value: 3, done: false&#125;&quot;</span></span><br><span class="line"><span class="built_in">console</span>.log(iterator.next());  <span class="comment">// &quot;&#123; value: undefiend, done: true&#125;&quot;</span></span><br><span class="line"><span class="comment">// 之后所有的调用都会返回相同内容</span></span><br><span class="line"><span class="built_in">console</span>.log(iterator.next());  <span class="comment">// &quot;&#123; value: undefiend, done: true&#125;&quot;</span></span><br></pre></td></tr></table></figure>
+
+<h1 id="第八章-对象、类与面向对象编程"><a href="#第八章-对象、类与面向对象编程" class="headerlink" title="第八章 对象、类与面向对象编程"></a>第八章 对象、类与面向对象编程</h1><h3 id="属性的类型"><a href="#属性的类型" class="headerlink" title="属性的类型"></a>属性的类型</h3><p>ecma-262使用了一些内部特性来描述属性的特征。这些特性是由为js实现引擎的规范定义的，因此开发者不能在js中直接访问。属性分为两种：数据属性和访问属性</p>
+<ol>
+<li><p>数据属性：数据属性包含一个保存数据的位置。数据属性有4个特性描述他们的行为</p>
+<ul>
+<li>[[Configurable]]:是否可以删除重新定义</li>
+<li>[[Enunberable]]:是否可以通过for-in循环返回</li>
+<li>[[Writeable]]：是否可以被修改</li>
+<li>[[Value]]：包含属性实际的值</li>
+</ul>
+<p>要修改属性的默认特性，就必须使用Object.defineProperty（）方法，这个方法接收3个参数：要给其添加的属性的对象，属性的名称和一个描述符对象。描述对象上的属性可以包括：configurable，enumerable，writable，value。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> person = &#123;</span><br><span class="line">    <span class="built_in">Object</span>.defineProperty(person,<span class="string">&#x27;name&#x27;</span>,&#123;</span><br><span class="line">    <span class="attr">writable</span>:<span class="literal">false</span>,</span><br><span class="line">    <span class="attr">value</span>:<span class="string">&quot;Nicholas&quot;</span></span><br><span class="line">&#125;);</span><br><span class="line"><span class="built_in">console</span>.log(person.name);</span><br><span class="line">person.name = <span class="string">&#x27;Greg&#x27;</span>;</span><br><span class="line"><span class="built_in">console</span>.log(person.name);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>这个例子创建了一个名为name的属性并给他赋予一个只读的值。这个属性不能在修改了</p>
+</li>
+<li><p>访问器属性</p>
+<p>访问器属性不包含数据值。相反，他们包含一个获取函数（getter）和一个设置函数（setter），不过这两个函数并不是必须的。在读取访问器属性时，会调用获取函数，这个函数会返回一个有效值。在写入访问器属性时，会调用设置函数并传入新值。访问器属性有4个特性描述他们的行为</p>
+<ul>
+<li>[[Configurable]]:表示属性是否可以通过delete删除并重新定义，是否可以修改它的特性。</li>
+<li>[[Enumerable]]:表示是否可以通过for-in循环返回</li>
+<li>[[Get]]:获取函数，在读取属性时调用。默认值undefined</li>
+<li>[[Set]]:设置函数，在写入属性时调用。默认值undefined</li>
+</ul>
+</li>
+</ol>
+<h3 id="读取属性的特性"><a href="#读取属性的特性" class="headerlink" title="读取属性的特性"></a>读取属性的特性</h3><p>使用Object.getOwnPropertyDescriptor()方法可以取得指定属性的属性描述符。这个方法接收两个参数：属性所在的对象和要取得其描述符的属性名。返回值是一个对象，对于访问器属性包含configurable、enumerable、get、set属性，对于数据属性包含configurable、enumerable、writable和value。</p>
+<h3 id="合并对象"><a href="#合并对象" class="headerlink" title="合并对象"></a>合并对象</h3><p>把源对象所有的本地属性一起复制到目标对象上。这种操作被称为“混入”(mixin)，因为目标对象通过混入源对象的属性得到了增强，es6专门为合并对象提供了Object.assign（）方法。这个方法接收一个目标对象和一个或多个源对象作为参数，然后将每个源对象中可枚举对象和自有属性复制到目标对象。<strong>如果目标对象中的属性具有相同的键，则属性将被源对象中的属性覆盖。后面的源对象的属性将类似地覆盖前面的源对象的属性。</strong></p>
+<h3 id="对象标识及相等判定"><a href="#对象标识及相等判定" class="headerlink" title="对象标识及相等判定"></a>对象标识及相等判定</h3><p>es6新增Object.is()方法，用于判断两个参数是否一样</p>
+<h3 id="增强对象语法"><a href="#增强对象语法" class="headerlink" title="增强对象语法"></a>增强对象语法</h3><p>简写属性名只要使用变量名就会自动被解释为同名的属性键。如果没有找到同名变量，则会抛出referenceerror</p>
+<h3 id="对象解构"><a href="#对象解构" class="headerlink" title="对象解构"></a>对象解构</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> person = &#123;</span><br><span class="line">	<span class="attr">name</span>:<span class="string">&#x27;Matt&#x27;</span>,</span><br><span class="line">    <span class="attr">age</span>:<span class="number">27</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">let</span> &#123;name,age&#125; = person</span><br><span class="line"><span class="built_in">console</span>.log(name)</span><br><span class="line"><span class="built_in">console</span>.log(age)</span><br></pre></td></tr></table></figure>
+
+<h3 id="嵌套结构"><a href="#嵌套结构" class="headerlink" title="嵌套结构"></a>嵌套结构</h3><p>结构对于引用嵌套的属性或赋值目标没有限制。为此，可以通过解构来复制对象属性</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> person = &#123;</span><br><span class="line">    <span class="attr">name</span>:<span class="string">&#x27;matt&#x27;</span>,</span><br><span class="line">    <span class="attr">age</span>:<span class="number">27</span>,</span><br><span class="line">    <span class="attr">job</span>:&#123;</span><br><span class="line">        <span class="attr">title</span>:<span class="string">&quot;SE&quot;</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> personCopy = &#123;&#125;;</span><br><span class="line">(&#123;</span><br><span class="line">    <span class="attr">name</span>:personCopy.name,</span><br><span class="line">    <span class="attr">age</span>:personCopy.age,</span><br><span class="line">    <span class="attr">job</span>:personCopy.job</span><br><span class="line">&#125; = person)</span><br></pre></td></tr></table></figure>
+
+</div><footer class="post-footer"><div class="post-ending ending"><div class="ending__text">------ END ------</div></div><div class="post-copyright copyright"><div class="copyright-author"><span class="copyright-author__name">Author: </span><span class="copyright-author__value"><a href="http://example.com">Wdam</a></span></div><div class="copyright-link"><span class="copyright-link__name">Link: </span><span class="copyright-link__value"><a href="http://example.com/2021/10/28/js%E9%98%85%E8%AF%BB%E7%AC%94%E8%AE%B0/">http://example.com/2021/10/28/js%E9%98%85%E8%AF%BB%E7%AC%94%E8%AE%B0/</a></span></div><div class="copyright-notice"><span class="copyright-notice__name">Copyright: </span><span class="copyright-notice__value">All articles in this blog are licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" rel="external nofollow" target="_blank">BY-NC-SA</a> unless stating additionally</span></div></div><nav class="post-paginator paginator"><div class="paginator-prev"><a class="paginator-prev__link" href="/2021/10/28/NodeJs/"><span class="paginator-prev__icon"><i class="fas fa-angle-left"></i></span><span class="paginator-prev__text">[ Untitled ]</span></a></div><div class="paginator-next"><a class="paginator-next__link" href="/2021/10/28/FLEX%E5%B8%83%E5%B1%80/"><span class="paginator-prev__text">[ Untitled ]</span><span class="paginator-next__icon"><i class="fas fa-angle-right"></i></span></a></div></nav></footer></div></div></div><div class="sidebar-wrap" id="sidebar-wrap"><aside class="sidebar" id="sidebar"><div class="sidebar-nav"><span class="sidebar-nav-toc current">Catalog</span><span class="sidebar-nav-ov">Overview</span></div><section class="sidebar-toc"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC%E4%BA%8C%E7%AB%A0-HTML%E4%B8%AD%E7%9A%84JavaScript"><span class="toc-number">1.</span> <span class="toc-text">第二章 HTML中的JavaScript</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%A0%87%E7%AD%BE%E4%BD%8D%E7%BD%AE%EF%BC%9A"><span class="toc-number">1.1.</span> <span class="toc-text">标签位置：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BB%B6%E8%BF%9F%E6%89%A7%E8%A1%8C%E8%84%9A%E6%9C%AC%EF%BC%9A"><span class="toc-number">1.2.</span> <span class="toc-text">延迟执行脚本：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BC%82%E6%AD%A5%E6%89%A7%E8%A1%8C%E8%84%9A%E6%9C%AC%EF%BC%9A"><span class="toc-number">1.3.</span> <span class="toc-text">异步执行脚本：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8A%A8%E6%80%81%E5%8A%A0%E8%BD%BD%E8%84%9A%E6%9C%AC%EF%BC%9A"><span class="toc-number">1.4.</span> <span class="toc-text">动态加载脚本：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%A1%8C%E5%86%85%E4%BB%A3%E7%A0%81%E4%B8%8E%E5%A4%96%E9%83%A8%E6%96%87%E4%BB%B6"><span class="toc-number">1.5.</span> <span class="toc-text">行内代码与外部文件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#lt-noscript-gt-%E6%A0%87%E7%AD%BE"><span class="toc-number">1.6.</span> <span class="toc-text">&lt;noscript&gt;标签</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC%E4%B8%89%E7%AB%A0%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80"><span class="toc-number">2.</span> <span class="toc-text">第三章语言基础</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AF%AD%E6%B3%95"><span class="toc-number">2.1.</span> <span class="toc-text">语法</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8F%98%E9%87%8F"><span class="toc-number">2.1.1.</span> <span class="toc-text">变量</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#var-%E5%85%B3%E9%94%AE%E5%AD%97"><span class="toc-number">2.1.2.</span> <span class="toc-text">var 关键字</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#const%E5%85%B3%E9%94%AE%E5%AD%97"><span class="toc-number">2.1.3.</span> <span class="toc-text">const关键字</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B"><span class="toc-number">2.2.</span> <span class="toc-text">数据类型</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#symbol%E7%B1%BB%E5%9E%8B"><span class="toc-number">2.3.</span> <span class="toc-text">symbol类型</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%93%8D%E4%BD%9C%E7%AC%A6"><span class="toc-number">2.4.</span> <span class="toc-text">操作符</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AF%AD%E5%8F%A5"><span class="toc-number">2.5.</span> <span class="toc-text">语句</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC%E5%9B%9B%E7%AB%A0%E5%8F%98%E9%87%8F%E4%BD%9C%E7%94%A8%E5%9F%9F%E4%B8%8E%E5%86%85%E5%AD%98"><span class="toc-number">3.</span> <span class="toc-text">第四章变量作用域与内存</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8E%9F%E5%A7%8B%E5%80%BC%E4%B8%8E%E5%BC%95%E7%94%A8%E5%80%BC"><span class="toc-number">3.0.1.</span> <span class="toc-text">原始值与引用值</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8A%A8%E6%80%81%E5%B1%9E%E6%80%A7"><span class="toc-number">3.0.2.</span> <span class="toc-text">动态属性</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A4%8D%E5%88%B6%E5%80%BC"><span class="toc-number">3.0.3.</span> <span class="toc-text">复制值</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#typeof"><span class="toc-number">3.0.4.</span> <span class="toc-text">typeof</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%89%A7%E8%A1%8C%E4%B8%8A%E4%B8%8B%E6%96%87%E5%92%8C%E4%BD%9C%E7%94%A8%E5%9F%9F"><span class="toc-number">3.0.5.</span> <span class="toc-text">执行上下文和作用域</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BD%9C%E7%94%A8%E5%9F%9F%E5%A2%9E%E5%BC%BA"><span class="toc-number">3.0.6.</span> <span class="toc-text">作用域增强</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8F%98%E9%87%8F%E5%A3%B0%E6%98%8E"><span class="toc-number">3.0.7.</span> <span class="toc-text">变量声明</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6"><span class="toc-number">3.0.8.</span> <span class="toc-text">垃圾回收</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC%E4%BA%94%E7%AB%A0%E5%9F%BA%E6%9C%AC%E5%BC%95%E7%94%A8%E7%B1%BB%E5%9E%8B"><span class="toc-number">4.</span> <span class="toc-text">第五章基本引用类型</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#date"><span class="toc-number">4.1.</span> <span class="toc-text">date</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BB%A7%E6%89%BF%E7%9A%84%E6%96%B9%E6%B3%95"><span class="toc-number">4.2.</span> <span class="toc-text">继承的方法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%97%A5%E6%9C%9F%E6%A0%BC%E5%BC%8F%E5%8C%96%E7%9A%84%E6%96%B9%E6%B3%95"><span class="toc-number">4.3.</span> <span class="toc-text">日期格式化的方法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%97%A5%E6%9C%9F-%E6%97%B6%E9%97%B4%E7%BB%84%E4%BB%B6%E6%96%B9%E6%B3%95"><span class="toc-number">4.4.</span> <span class="toc-text">日期&#x2F;时间组件方法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#RegExp"><span class="toc-number">4.5.</span> <span class="toc-text">RegExp</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8D%95%E4%BE%8B%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1"><span class="toc-number">4.6.</span> <span class="toc-text">单例内置对象</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC%E5%85%AD%E7%AB%A0%E9%9B%86%E5%90%88%E5%BC%95%E7%94%A8%E7%B1%BB%E5%9E%8B"><span class="toc-number">5.</span> <span class="toc-text">第六章集合引用类型</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Object"><span class="toc-number">5.1.</span> <span class="toc-text">Object</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Array"><span class="toc-number">5.2.</span> <span class="toc-text">Array</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BF%AD%E4%BB%A3%E5%99%A8%E6%96%B9%E6%B3%95"><span class="toc-number">5.2.1.</span> <span class="toc-text">迭代器方法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A4%8D%E5%88%B6%E5%92%8C%E5%A1%AB%E5%85%85%E6%96%B9%E6%B3%95"><span class="toc-number">5.2.2.</span> <span class="toc-text">复制和填充方法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BD%AC%E6%8D%A2%E6%96%B9%E6%B3%95"><span class="toc-number">5.2.3.</span> <span class="toc-text">转换方法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%A0%88%E6%96%B9%E6%B3%95"><span class="toc-number">5.2.4.</span> <span class="toc-text">栈方法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%98%9F%E5%88%97%E6%96%B9%E6%B3%95"><span class="toc-number">5.2.5.</span> <span class="toc-text">队列方法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8E%92%E5%BA%8F%E6%96%B9%E6%B3%95"><span class="toc-number">5.2.6.</span> <span class="toc-text">排序方法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%93%8D%E4%BD%9C%E6%96%B9%E6%B3%95"><span class="toc-number">5.2.7.</span> <span class="toc-text">操作方法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%90%9C%E7%B4%A2%E5%92%8C%E4%BD%8D%E7%BD%AE%E6%96%B9%E6%B3%95"><span class="toc-number">5.2.8.</span> <span class="toc-text">搜索和位置方法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BF%AD%E4%BB%A3%E6%96%B9%E6%B3%95"><span class="toc-number">5.2.9.</span> <span class="toc-text">迭代方法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BD%92%E5%B9%B6%E6%96%B9%E6%B3%95"><span class="toc-number">5.2.10.</span> <span class="toc-text">归并方法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%9A%E5%9E%8B%E6%95%B0%E7%BB%84"><span class="toc-number">5.2.11.</span> <span class="toc-text">定型数组</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#map"><span class="toc-number">5.3.</span> <span class="toc-text">map</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9F%BA%E6%9C%ACapi"><span class="toc-number">5.3.1.</span> <span class="toc-text">基本api</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%A1%BA%E5%BA%8F%E4%B8%8E%E8%BF%AD%E4%BB%A3"><span class="toc-number">5.3.2.</span> <span class="toc-text">顺序与迭代</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%80%89%E6%8B%A9Object%E8%BF%98%E6%98%AFMap"><span class="toc-number">5.3.3.</span> <span class="toc-text">选择Object还是Map</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#weakmap"><span class="toc-number">5.4.</span> <span class="toc-text">weakmap</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9F%BA%E6%9C%ACapi-1"><span class="toc-number">5.4.1.</span> <span class="toc-text">基本api</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%8D%E5%8F%AF%E8%BF%AD%E4%BB%A3%E9%94%AE"><span class="toc-number">5.4.2.</span> <span class="toc-text">不可迭代键</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Set"><span class="toc-number">5.5.</span> <span class="toc-text">Set</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%A1%BA%E5%BA%8F%E4%B8%8E%E8%BF%AD%E4%BB%A3-1"><span class="toc-number">5.5.1.</span> <span class="toc-text">顺序与迭代</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#WeakSet"><span class="toc-number">5.6.</span> <span class="toc-text">WeakSet()</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC%E4%B8%83%E7%AB%A0%E8%BF%AD%E4%BB%A3%E5%99%A8%E4%B8%8E%E7%94%9F%E6%88%90%E5%99%A8"><span class="toc-number">6.</span> <span class="toc-text">第七章迭代器与生成器</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%90%86%E8%A7%A3%E8%BF%AD%E4%BB%A3"><span class="toc-number">6.1.</span> <span class="toc-text">理解迭代</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%BF%AD%E4%BB%A3%E5%99%A8%E6%A8%A1%E5%BC%8F"><span class="toc-number">6.2.</span> <span class="toc-text">迭代器模式</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8F%AF%E8%BF%AD%E4%BB%A3%E5%8D%8F%E8%AE%AE"><span class="toc-number">6.2.1.</span> <span class="toc-text">可迭代协议</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BF%AD%E4%BB%A3%E5%99%A8%E5%8D%8F%E8%AE%AE"><span class="toc-number">6.2.2.</span> <span class="toc-text">迭代器协议</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%94%9F%E6%88%90%E5%99%A8"><span class="toc-number">6.3.</span> <span class="toc-text">生成器</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%94%9F%E6%88%90%E5%99%A8%E5%9F%BA%E7%A1%80"><span class="toc-number">6.3.1.</span> <span class="toc-text">生成器基础</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC%E5%85%AB%E7%AB%A0-%E5%AF%B9%E8%B1%A1%E3%80%81%E7%B1%BB%E4%B8%8E%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B"><span class="toc-number">7.</span> <span class="toc-text">第八章 对象、类与面向对象编程</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B1%9E%E6%80%A7%E7%9A%84%E7%B1%BB%E5%9E%8B"><span class="toc-number">7.0.1.</span> <span class="toc-text">属性的类型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AF%BB%E5%8F%96%E5%B1%9E%E6%80%A7%E7%9A%84%E7%89%B9%E6%80%A7"><span class="toc-number">7.0.2.</span> <span class="toc-text">读取属性的特性</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%90%88%E5%B9%B6%E5%AF%B9%E8%B1%A1"><span class="toc-number">7.0.3.</span> <span class="toc-text">合并对象</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AF%B9%E8%B1%A1%E6%A0%87%E8%AF%86%E5%8F%8A%E7%9B%B8%E7%AD%89%E5%88%A4%E5%AE%9A"><span class="toc-number">7.0.4.</span> <span class="toc-text">对象标识及相等判定</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A2%9E%E5%BC%BA%E5%AF%B9%E8%B1%A1%E8%AF%AD%E6%B3%95"><span class="toc-number">7.0.5.</span> <span class="toc-text">增强对象语法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AF%B9%E8%B1%A1%E8%A7%A3%E6%9E%84"><span class="toc-number">7.0.6.</span> <span class="toc-text">对象解构</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B5%8C%E5%A5%97%E7%BB%93%E6%9E%84"><span class="toc-number">7.0.7.</span> <span class="toc-text">嵌套结构</span></a></li></ol></li></ol></li></ol></section><!-- ov = overview--><section class="sidebar-ov hide"><div class="sidebar-ov-author"><div class="sidebar-ov-author__avatar"><img class="sidebar-ov-author__avatar_img" src="/images/icons/stun-logo.svg" alt="avatar"></div><p class="sidebar-ov-author__text">hello world</p></div><div class="sidebar-ov-state"><a class="sidebar-ov-state-item sidebar-ov-state-item--posts" href="/archives/"><div class="sidebar-ov-state-item__count">16</div><div class="sidebar-ov-state-item__name">Archives</div></a></div><div class="sidebar-ov-cc"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" target="_blank" rel="noopener" data-popover="Creative Commons" data-popover-pos="up"><img src="/images/cc-by-nc-sa.svg"></a></div></section><div class="sidebar-reading"><div class="sidebar-reading-info"><span class="sidebar-reading-info__text">You have read </span><span class="sidebar-reading-info__num">0</span><span class="sidebar-reading-info__perc">%</span></div><div class="sidebar-reading-line"></div></div></aside></div><div class="clearfix"></div></div></main><footer class="footer" id="footer"><div class="footer-inner"><div><span>Copyright © 2022</span><span class="footer__icon"><i class="fas fa-heart"></i></span><span>Wdam</span></div><div><span>Powered by <a href="http://hexo.io/" title="Hexo" target="_blank" rel="noopener">Hexo</a></span><span> v5.4.0</span><span class="footer__devider">|</span><span>Theme - <a href="https://github.com/liuyib/hexo-theme-stun/" title="Stun" target="_blank" rel="noopener">Stun</a></span><span> v2.6.2</span></div></div></footer><div class="loading-bar" id="loading-bar"><div class="loading-bar__progress"></div></div><div class="back2top" id="back2top"><span class="back2top__icon"><i class="fas fa-rocket"></i></span></div></div><script src="https://cdn.jsdelivr.net/npm/jquery@v3.4.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.ui.min.js"></script><script src="/js/utils.js?v=2.6.2"></script><script src="/js/stun-boot.js?v=2.6.2"></script><script src="/js/scroll.js?v=2.6.2"></script><script src="/js/header.js?v=2.6.2"></script><script src="/js/sidebar.js?v=2.6.2"></script></body></html>
