@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2022-07-07T03:11:43.268Z</updated>
+  <updated>2022-07-18T10:29:49.454Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,24 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>在wangeditor内插入本地图片并上传</title>
+    <link href="http://example.com/2022/07/18/%E9%A9%AF%E6%9C%8DwangEditor/"/>
+    <id>http://example.com/2022/07/18/%E9%A9%AF%E6%9C%8DwangEditor/</id>
+    <published>2022-07-18T10:11:23.489Z</published>
+    <updated>2022-07-18T10:29:49.454Z</updated>
+    
+    <content type="html"><![CDATA[        <h2 id="在wangeditor内插入本地图片并上传"   >          <a href="#在wangeditor内插入本地图片并上传" class="heading-link"><i class="fas fa-link"></i></a><a href="#在wangeditor内插入本地图片并上传" class="headerlink" title="在wangeditor内插入本地图片并上传"></a>在wangeditor内插入本地图片并上传</h2>      <span id="more"></span><p><span class="exturl"><a class="exturl__link"   href="https://itcn.blog/p/235210788.html" >参考链接</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p><p>1.配置编辑器菜单，使用用户自定义上传</p><figure class="highlight js"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> editorConfig = &#123;</span><br><span class="line">    <span class="attr">placeholder</span>: <span class="string">&#x27;请输入内容...&#x27;</span>,</span><br><span class="line">    <span class="attr">MENU_CONF</span>: &#123; <span class="comment">/* 菜单配置，下文解释 */</span> &#125;</span><br><span class="line">&#125;</span><br><span class="line">editorConfig.MENU_CONF[<span class="string">&#x27;uploadImage&#x27;</span>] = &#123;</span><br><span class="line">  <span class="attr">base64LimitSize</span>: <span class="number">20</span> * <span class="number">1024</span>, <span class="comment">// 20kb以内的图片不上传,直接转base64</span></span><br><span class="line">  <span class="comment">// // 用户自定义上传图片</span></span><br><span class="line">  <span class="function"><span class="title">customUpload</span>(<span class="params">file, insertFn</span>)</span> &#123;</span><br><span class="line">      <span class="comment">//取决于后端设计，这里请求接口会返回阿里oss的配置对象</span></span><br><span class="line">    $getUploadFormParams(file, <span class="string">&#x27;avatar&#x27;</span>).then(<span class="function"><span class="params">res</span> =&gt;</span>&#123;</span><br><span class="line">     upLoadFile(res.formActionUrl,res.formParams,file).then(<span class="function"><span class="params">res</span> =&gt;</span>&#123;&#125;)</span><br><span class="line">      insertFn(res.ossFileUrl, file.name, res.ossFileUrl) <span class="comment">//这里返回的url没有上传到oss所以无法访问，缺乏上传到oss的方法</span></span><br><span class="line">    &#125;).catch(<span class="function"><span class="params">err</span> =&gt;</span>&#123;</span><br><span class="line">      alert(<span class="string">&#x27;上传错误&#x27;</span>)</span><br><span class="line">    &#125;)</span><br><span class="line">  &#125;,</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//上传图片</span></span><br><span class="line"><span class="keyword">const</span> upLoadFile = <span class="function">(<span class="params">url,data,file</span>) =&gt;</span>&#123;</span><br><span class="line">  <span class="keyword">let</span> formData = <span class="keyword">new</span> FormData() <span class="comment">//返回结果405的处理方法</span></span><br><span class="line">  formData.append(<span class="string">&#x27;OSSAccessKeyId&#x27;</span>,data.OSSAccessKeyId)</span><br><span class="line">  formData.append(<span class="string">&#x27;key&#x27;</span>,data.key)</span><br><span class="line">  formData.append(<span class="string">&#x27;Signature&#x27;</span>,data.Signature)</span><br><span class="line">  formData.append(<span class="string">&#x27;policy&#x27;</span>,data.policy)</span><br><span class="line">  formData.append(<span class="string">&#x27;success_action_status&#x27;</span>,data.success_action_status)</span><br><span class="line">  formData.append(<span class="string">&#x27;file&#x27;</span>,file)</span><br><span class="line">  <span class="keyword">return</span> axios(&#123;</span><br><span class="line">    <span class="attr">url</span>:url,</span><br><span class="line">    <span class="attr">method</span>:<span class="string">&#x27;POST&#x27;</span>,</span><br><span class="line">    <span class="attr">data</span>:formData,</span><br><span class="line">    <span class="attr">headers</span>:&#123;</span><br><span class="line">      <span class="attr">iToken</span>:storage.getToken(),<span class="comment">//看要求加token</span></span><br><span class="line">      <span class="string">&#x27;content-type&#x27;</span>:<span class="string">&#x27;multipart/form-data&#x27;</span></span><br><span class="line">    &#125;,</span><br><span class="line">  &#125;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></div></figure>]]></content>
+    
+    
+    <summary type="html">&lt;h2 id=&quot;在wangeditor内插入本地图片并上传&quot;   &gt;
+          &lt;a href=&quot;#在wangeditor内插入本地图片并上传&quot; class=&quot;heading-link&quot;&gt;&lt;i class=&quot;fas fa-link&quot;&gt;&lt;/i&gt;&lt;/a&gt;&lt;a href=&quot;#在wangeditor内插入本地图片并上传&quot; class=&quot;headerlink&quot; title=&quot;在wangeditor内插入本地图片并上传&quot;&gt;&lt;/a&gt;在wangeditor内插入本地图片并上传&lt;/h2&gt;</summary>
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>手写表单及校验</title>
